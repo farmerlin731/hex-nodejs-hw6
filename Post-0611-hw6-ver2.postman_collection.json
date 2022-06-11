@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "79726b09-7acf-4d57-acb0-2707a97d3db8",
+		"name": "Post-0611-hw6-ver2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20778936"
+	},
+	"item": [
+		{
+			"name": "觀看所有動態",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTQ4MDAzMTYyMjQ0MzVlM2MzNjk4ZiIsImlhdCI6MTY1NDk0Nzg0MywiZXhwIjoxNjU3NTM5ODQzfQ.aBmf0DeYggyYTUDvOgOjKr4nd6Sz9LkNBk6L-rZm4S4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://calm-scrubland-08158.herokuapp.com/posts?timeSort=asc",
+					"protocol": "https",
+					"host": [
+						"calm-scrubland-08158",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "timeSort",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增文章",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTQ4MDAzMTYyMjQ0MzVlM2MzNjk4ZiIsImlhdCI6MTY1NDk0Nzg0MywiZXhwIjoxNjU3NTM5ODQzfQ.aBmf0DeYggyYTUDvOgOjKr4nd6Sz9LkNBk6L-rZm4S4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\":\"Hello World _yyy_0611~ :)\",\n    \"tags\":[\"天氣\"],\n    \"type\":\"person\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://calm-scrubland-08158.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"calm-scrubland-08158",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "註冊",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Farmer Lin\",\n    \"email\":\"TK888@gmail.com\",\n    \"password\":\"helloworld\",\n    \"confirmPassword\":\"helloworld\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://calm-scrubland-08158.herokuapp.com/users/sign_up",
+					"protocol": "https",
+					"host": [
+						"calm-scrubland-08158",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"sign_up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登入",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTMyOThkY2UxY2RjOGE2NGYxZmM4ZSIsImlhdCI6MTY1NDk0Mzc1MywiZXhwIjoxNjU1NTQ4NTUzfQ.oxbl43JyK3VQmcRI1oSdTM6-CLgzngMSJwQ0ZVtnpGs",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"TK888@gmail.com\",\n    \"password\":\"helloworld4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://calm-scrubland-08158.herokuapp.com/users/sign_in",
+					"protocol": "https",
+					"host": [
+						"calm-scrubland-08158",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "修改密碼",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTQ4MDAzMTYyMjQ0MzVlM2MzNjk4ZiIsImlhdCI6MTY1NDk0Nzg0MywiZXhwIjoxNjU3NTM5ODQzfQ.aBmf0DeYggyYTUDvOgOjKr4nd6Sz9LkNBk6L-rZm4S4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"TK888@gmail.com\",\n    \"password\":\"helloworld4\",\n    \"confirmPassword\":\"helloworld4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://calm-scrubland-08158.herokuapp.com/users/updatePassword",
+					"protocol": "https",
+					"host": [
+						"calm-scrubland-08158",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"updatePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得個人資料",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTQ4MDAzMTYyMjQ0MzVlM2MzNjk4ZiIsImlhdCI6MTY1NDk0Nzg0MywiZXhwIjoxNjU3NTM5ODQzfQ.aBmf0DeYggyYTUDvOgOjKr4nd6Sz9LkNBk6L-rZm4S4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://calm-scrubland-08158.herokuapp.com/users/profile",
+					"protocol": "https",
+					"host": [
+						"calm-scrubland-08158",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新個人資料",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTQ4MDAzMTYyMjQ0MzVlM2MzNjk4ZiIsImlhdCI6MTY1NDk0Nzg0MywiZXhwIjoxNjU3NTM5ODQzfQ.aBmf0DeYggyYTUDvOgOjKr4nd6Sz9LkNBk6L-rZm4S4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Super Farmer Lin v2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://calm-scrubland-08158.herokuapp.com/users/profile",
+					"protocol": "https",
+					"host": [
+						"calm-scrubland-08158",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
